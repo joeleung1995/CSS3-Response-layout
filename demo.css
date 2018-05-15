@@ -1,0 +1,280 @@
+/*通用样式*/
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: #424242;
+}
+.clear-float::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+body {
+	min-width: 400px;
+}
+.middle {
+	width: 90%;
+	margin: 0 auto;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+/*顶部通栏*/
+.top {
+	width: 100%;
+	background-color: #333;
+}
+.top .content {
+	width: 90%;
+	margin: 0 auto;
+}
+.top .content p {
+	color: #fff;
+	line-height: 30px;
+}
+.top .content p a {
+	color: skyblue;
+	text-decoration: none;
+}
+@media screen and (max-width: 500px) {
+	.top .content p:first-child {
+		display: none;
+	}
+}
+
+/*导航栏，老师学员栏，轮播图样式*/
+.head .pic img {
+	height: 100px;
+}
+.head .nav ul li {
+	display: inline-block;
+	width: 100px;
+	padding: 40px 0;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.head .nav li a {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	border-right: 2px solid #aaa;
+}
+@media screen and (max-width: 900px) {
+	.head .pic img {
+		float: left;
+		height: 80px;
+	}
+	.head .nav ul li {
+		font-size: 14px;
+		width: 70px;
+		padding: 20px 0;
+	}
+	.head .nav ul li:nth-child(2) {
+		display: none;
+	}
+}
+@media screen and (max-width: 500px) {
+	.head .pic {
+		width: 100%;
+		text-align: center;
+	}
+	.head .pic img {
+		float: none;
+	}
+	.head .nav ul {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+
+.head-middle {
+	width: 100%;
+	background-color: #333;
+}
+.head-middle h3 a {
+	display: inline-block;
+	font-size: 18px;
+	line-height: 80px;
+	color: #fff;
+	padding: 0 20px;
+}
+@media screen and (max-width: 500px) {
+	.head-middle h3 {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	.head-middle h3:last-child {
+		border-top: 1px solid #fff;
+	}
+	.head-middle h3 a {
+		font-size: 16px;
+		line-height: 60px;
+	}
+	.head-middle h3:last-child a {
+		line-height: 59px;
+	}
+}
+
+
+.head-bottom {
+	width: 100%;
+}
+.head-bottom img {
+	margin-top: 1px;
+	width: 100%;
+}
+
+
+.main .coursers {
+	display: flex;
+}
+.main .item {
+	flex: 1;
+	text-align: center;
+	padding: 10px;
+}
+.main .item .box {
+	width: 100%;
+	border: 1px solid #ccc;
+}
+.main .coursers h3 {
+	display: inline-block;
+	color: skyblue;
+	font-size: 18px;
+	line-height: 40px;
+}
+.main .coursers span {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 40px;
+	color: #aaa;
+}
+@media screen and (max-width: 900px) {
+	.main .coursers h3,
+	.main .coursers span {
+		display: block;
+		width: 100%;
+	}
+	.main .coursers h3 {
+		font-size: 16px;
+	}
+	.main .coursers span {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.main .coursers {
+		display: block;
+	}
+	.main .item {
+		width: 100%;
+		padding: 1px 0;
+	}
+}
+
+
+.main .content {
+	border-top: 2px solid skyblue;
+	margin-top: 4px;
+}
+.main .content .motto,
+.main .content .classes {
+	display: inline-block;
+	vertical-align: top;
+}
+.main .content .motto {
+	width: 20%;
+	text-align: center;
+	padding: 30px 20px;
+	box-sizing: border-box;
+}
+.main .motto p {
+	padding: 10px 0;
+}
+.main .content .classes {
+	width: 80%;
+}
+.main .classes .item {
+	border-bottom: 1px solid #ccc;
+}
+.main .classes .item span {
+	display: inline-block;
+	width: 28%;
+	line-height: 60px;
+}
+.main .classes .item div {
+	width: 40%;
+	display: inline-block;
+	color: skyblue;
+	line-height: 60px;
+	text-align: center;
+}
+.main .content .last {
+	border-bottom: none;
+}
+@media screen and (max-width: 900px) {
+	.main .content .motto,
+	.main .content .classes {
+		display: block;
+		width: 100%;
+	}
+	.main .content .motto {
+		border-bottom: 1px solid skyblue;
+	}
+	.main .content .motto p {
+		display: inline-block;
+		width: 32%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.main .classes .item span {
+		width: 45%;
+	}
+	.main .classes .item div {
+		display: block;
+		width: 100%;
+	}
+}
+
+/*底部*/
+.footer .pic {
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+}
+.footer .pic img {
+	height: 100px;
+	margin-top: 20px; 
+}
+.footer .info {
+	display: inline-block;
+	width: 78%;
+	vertical-align: top;
+}
+.footer .info ul {
+	display: inline-block;
+	width: 24%;
+	text-align: center;
+	line-height: 30px;
+}
+@media screen and (max-width: 900px) {
+	.footer {
+		font-size: 14px;
+	}
+	.footer .info {
+		width: 100%;
+	}
+	.footer .pic img {
+		display: none;
+	}
+}
+
